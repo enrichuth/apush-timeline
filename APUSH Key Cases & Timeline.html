@@ -1,0 +1,571 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+
+<title>APUSH Key Cases & Timeline</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* APUSH Charts — legal + political document aesthetic */
+:root {
+  --bg: #FFFFFF;
+  --bg2: #EDEBE4;
+  --fg: #18160F;
+  --fg2: #58554C;
+  --rule: #D0CCBC;
+  --navy: #1A2C44;
+  --red: #8B1C1C;
+  --gold: #906012;
+  --green: #1E4A28;
+  --blue: #144078;
+  --teal: #156060;
+  --table-head: #1A2C44;
+  --table-head-fg: #EDE9DC;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0E0D0A;
+    --bg2: #181610;
+    --fg: #EDEAE0;
+    --fg2: #9A9488;
+    --rule: #34312A;
+    --navy: #6A90C0;
+    --red: #C05050;
+    --gold: #D4A040;
+    --green: #5A9E6A;
+    --blue: #5A80C0;
+    --teal: #3A9090;
+    --table-head: #EDEAE0;
+    --table-head-fg: #0E0D0A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0E0D0A;
+  --bg2: #181610;
+  --fg: #EDEAE0;
+  --fg2: #9A9488;
+  --rule: #34312A;
+  --navy: #6A90C0;
+  --red: #C05050;
+  --gold: #D4A040;
+  --green: #5A9E6A;
+  --blue: #5A80C0;
+  --teal: #3A9090;
+  --table-head: #EDEAE0;
+  --table-head-fg: #0E0D0A;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg); color: var(--fg);
+  font-family: 'IBM Plex Sans', system-ui, sans-serif;
+  font-size: 14px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+.page { max-width: 920px; margin: 0 auto; padding-block: 44px 80px; }
+
+/* COVER */
+.cover {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 20px;
+  align-items: end;
+  border-bottom: 2px solid var(--fg);
+  padding-bottom: 18px;
+  margin-bottom: 36px;
+}
+@media (max-width: 500px) { .cover { grid-template-columns: 1fr; } }
+.cover h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(22px, 4vw, 38px);
+  font-weight: 700; line-height: 1.05; text-wrap: balance;
+}
+.cover-sub { font-size: 12px; color: var(--fg2); margin-top: 6px; font-family: 'IBM Plex Mono', monospace; }
+.cover-seal {
+  background: var(--navy); color: var(--table-head-fg);
+  font-family: 'IBM Plex Mono', monospace; font-size: 9px;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 8px 12px; text-align: center; line-height: 1.6;
+  flex-shrink: 0;
+}
+
+/* SECTION HEADER */
+.sec-hd { display: flex; align-items: center; gap: 12px; margin: 36px 0 14px; }
+.sec-hd h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(15px, 2.5vw, 20px); font-weight: 700; }
+.sec-bar { flex: 1; height: 1px; background: var(--rule); }
+.sec-num { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--fg2); }
+
+/* VISUAL TIMELINE */
+.vtl { position: relative; }
+.vtl-row {
+  display: grid;
+  grid-template-columns: 68px auto 1fr;
+  gap: 0 12px;
+  align-items: start;
+  margin-bottom: 0;
+}
+.vtl-date {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px;
+  color: var(--gold);
+  text-align: right;
+  padding-top: 3px;
+  font-variant-numeric: tabular-nums;
+}
+.vtl-dot-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.vtl-dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: var(--navy);
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+.vtl-dot.red { background: var(--red); }
+.vtl-dot.gold { background: var(--gold); }
+.vtl-dot.green { background: var(--green); }
+.vtl-dot.blue { background: var(--blue); }
+.vtl-dot.teal { background: var(--teal); }
+.vtl-line {
+  width: 1px;
+  flex: 1;
+  min-height: 20px;
+  background: var(--rule);
+}
+.vtl-content { padding-bottom: 14px; min-width: 0; }
+.vtl-title {
+  font-weight: 600; font-size: 13.5px;
+  line-height: 1.35;
+}
+.vtl-desc { font-size: 12px; color: var(--fg2); margin-top: 2px; line-height: 1.45; }
+.vtl-cat {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 9px; text-transform: uppercase;
+  letter-spacing: .06em; color: var(--fg2);
+  margin-top: 2px;
+}
+
+/* SCOTUS TABLE */
+.t-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 4px; margin-bottom: 14px; }
+table.scotus {
+  width: 100%; border-collapse: collapse; min-width: 580px;
+}
+table.scotus th {
+  background: var(--table-head); color: var(--table-head-fg);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px; letter-spacing: .08em; text-transform: uppercase;
+  padding: 9px 12px; text-align: left;
+}
+table.scotus td {
+  border-top: 1px solid var(--rule);
+  padding: 8px 12px; font-size: 12.5px; vertical-align: top;
+  line-height: 1.45;
+}
+table.scotus tr:nth-child(even) td { background: var(--bg2); }
+table.scotus tr:nth-child(odd) td { background: var(--bg); }
+.case-name { font-weight: 600; color: var(--navy); font-family: 'Playfair Display', serif; font-style: italic; }
+.ruling-box { padding: 2px 7px; border-radius: 2px; font-size: 11px; display: inline-block; margin-top: 3px; }
+.ruling-expand { background: rgba(30,74,40,.15); color: var(--green); }
+.ruling-limit { background: rgba(139,28,28,.1); color: var(--red); }
+.ruling-neutral { background: var(--bg2); color: var(--fg2); }
+
+/* AMENDMENTS CHART */
+.amend-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+}
+.amend-card {
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.amend-head {
+  padding: 8px 12px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 500;
+}
+.amend-head.navy { background: var(--navy); color: var(--table-head-fg); }
+.amend-head.red { background: var(--red); color: var(--table-head-fg); }
+.amend-head.green { background: var(--green); color: var(--table-head-fg); }
+.amend-head.blue { background: var(--blue); color: var(--table-head-fg); }
+.amend-body { background: var(--bg2); padding: 10px 12px; }
+.amend-row {
+  display: grid; grid-template-columns: 36px 1fr;
+  gap: 6px; font-size: 12px;
+  padding: 4px 0;
+  border-bottom: 1px dotted var(--rule);
+}
+.amend-row:last-child { border-bottom: none; }
+.amend-num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  color: var(--fg2);
+}
+.amend-text { color: var(--fg); line-height: 1.4; }
+
+/* QUIZ */
+.quiz-box {
+  background: var(--bg2); border: 1px solid var(--rule);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 4px 4px 0;
+  padding: 14px 18px; margin-top: 14px;
+}
+.quiz-box h4 {
+  font-family: 'IBM Plex Mono', monospace; font-size: 10px;
+  text-transform: uppercase; letter-spacing: .08em; color: var(--gold); margin-bottom: 10px;
+}
+.quiz-row {
+  font-size: 13px; padding: 5px 0;
+  border-bottom: 1px dotted var(--rule);
+  display: grid; grid-template-columns: 22px 1fr; gap: 6px;
+}
+.quiz-row:last-child { border-bottom: none; }
+.qn { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--fg2); padding-top: 2px; }
+
+/* THEME BTN */
+.theme-btn {
+  position: sticky;
+  top: max(14px, env(safe-area-inset-top, 0px));
+  float: right;
+  background: var(--bg2); border: 1px solid var(--rule);
+  color: var(--fg); width: 32px; height: 32px; border-radius: 50%;
+  cursor: pointer; font-size: 14px; display: flex;
+  align-items: center; justify-content: center; z-index: 100;
+}
+
+/* FOOTER */
+.footer {
+  border-top: 2px solid var(--fg); padding-top: 16px; margin-top: 50px;
+  display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+}
+.footer-left { font-family: 'Playfair Display'; font-style: italic; font-size: 12px; color: var(--fg2); }
+.footer-right { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--fg2); letter-spacing: .1em; text-align: right; }
+</style>
+
+<button class="theme-btn" id="themeBtn">☀</button>
+
+<div class="page">
+  <div class="cover">
+    <div>
+      <h1>APUSH: Key Cases,<br>Amendments &amp; Timeline</h1>
+      <p class="cover-sub">ENRICHUTH · RESOURCE 2 · SUPREME COURT + LANDMARK EVENTS</p>
+    </div>
+    <div class="cover-seal">AP U.S.<br>HISTORY<br>CHARTS</div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="sec-hd">
+    <div class="sec-num">01</div>
+    <h2>Major Turning Points — Chronological</h2>
+    <div class="sec-bar"></div>
+  </div>
+
+  <div class="vtl">
+    <div class="vtl-row">
+      <div class="vtl-date">1619</div>
+      <div class="vtl-dot-col"><div class="vtl-dot gold"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">First Enslaved Africans Arrive; Virginia House of Burgesses</div>
+        <div class="vtl-desc">Two pivotal events in one year: beginnings of chattel slavery AND representative government in America.</div>
+        <div class="vtl-cat">Colonial · Labor · Government</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1676</div>
+      <div class="vtl-dot-col"><div class="vtl-dot red"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Bacon's Rebellion</div>
+        <div class="vtl-desc">Class conflict in Virginia reveals tension between backcountry settlers and elites — leads planters to shift from indentured servants to African slaves.</div>
+        <div class="vtl-cat">Colonial · Race · Labor</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1776</div>
+      <div class="vtl-dot-col"><div class="vtl-dot navy"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Declaration of Independence</div>
+        <div class="vtl-desc">Enlightenment principles applied to justify revolution. "All men are created equal" — yet slavery continues. Sets standard for future reform movements.</div>
+        <div class="vtl-cat">Revolution · Ideology</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1820</div>
+      <div class="vtl-dot-col"><div class="vtl-dot gold"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Missouri Compromise</div>
+        <div class="vtl-desc">Slavery admitted in Missouri, banned north of 36°30' line. First major compromise — masks rather than resolves sectional conflict.</div>
+        <div class="vtl-cat">Sectionalism · Slavery</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1848</div>
+      <div class="vtl-dot-col"><div class="vtl-dot teal"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Seneca Falls Convention</div>
+        <div class="vtl-desc">First women's rights convention; Declaration of Sentiments modeled on the Declaration of Independence. Beginning of organized women's suffrage movement.</div>
+        <div class="vtl-cat">Reform · Gender</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1865</div>
+      <div class="vtl-dot-col"><div class="vtl-dot green"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">13th Amendment — Abolition of Slavery</div>
+        <div class="vtl-desc">Formally ends slavery in the United States. But Black Codes immediately emerge to restrict African American freedom.</div>
+        <div class="vtl-cat">Civil War · Reconstruction</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1896</div>
+      <div class="vtl-dot-col"><div class="vtl-dot red"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Plessy v. Ferguson</div>
+        <div class="vtl-desc">"Separate but equal" codifies legal segregation. Sets the framework for Jim Crow — overturned by Brown v. Board in 1954.</div>
+        <div class="vtl-cat">SCOTUS · Civil Rights</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1920</div>
+      <div class="vtl-dot-col"><div class="vtl-dot teal"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">19th Amendment — Women's Suffrage</div>
+        <div class="vtl-desc">After 72 years of organized activism, women gain the right to vote. Note: Black women still largely disenfranchised in the South.</div>
+        <div class="vtl-cat">Progressive Era · Gender</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1933</div>
+      <div class="vtl-dot-col"><div class="vtl-dot navy"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">New Deal Begins (FDR)</div>
+        <div class="vtl-desc">Response to Great Depression. Expands federal government's role. Programs include FDIC, Social Security, Wagner Act. Shifts Democratic coalition.</div>
+        <div class="vtl-cat">Economy · Federal Power</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1954</div>
+      <div class="vtl-dot-col"><div class="vtl-dot green"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Brown v. Board of Education</div>
+        <div class="vtl-desc">SCOTUS unanimously overturns Plessy. Segregation in public schools is unconstitutional. Catalyzes the modern Civil Rights Movement.</div>
+        <div class="vtl-cat">SCOTUS · Civil Rights</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1964–65</div>
+      <div class="vtl-dot-col"><div class="vtl-dot green"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Civil Rights Act + Voting Rights Act</div>
+        <div class="vtl-desc">Most significant civil rights legislation since Reconstruction. Bans discrimination in public places, employment. Voting Rights Act eliminates literacy tests and poll taxes.</div>
+        <div class="vtl-cat">Civil Rights · LBJ Great Society</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1973</div>
+      <div class="vtl-dot-col"><div class="vtl-dot red"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Watergate + Vietnam War End</div>
+        <div class="vtl-desc">Nixon resigns amid Watergate scandal. Vietnam War ends with U.S. withdrawal. Trust in government collapses — long-term political cynicism.</div>
+        <div class="vtl-cat">Cold War · Politics</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">1980</div>
+      <div class="vtl-dot-col"><div class="vtl-dot gold"></div><div class="vtl-line"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">Reagan Revolution</div>
+        <div class="vtl-desc">Conservative realignment: supply-side economics, deregulation, anti-communism abroad. Reshapes both political parties for decades.</div>
+        <div class="vtl-cat">Conservatism · Economy</div>
+      </div>
+    </div>
+    <div class="vtl-row">
+      <div class="vtl-date">2001</div>
+      <div class="vtl-dot-col"><div class="vtl-dot red"></div></div>
+      <div class="vtl-content">
+        <div class="vtl-title">September 11 Attacks</div>
+        <div class="vtl-desc">Al-Qaeda attacks reshape American foreign policy, civil liberties debate (Patriot Act), and lead to the longest wars in U.S. history.</div>
+        <div class="vtl-cat">Foreign Policy · Civil Liberties</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCOTUS TABLE -->
+  <div class="sec-hd">
+    <div class="sec-num">02</div>
+    <h2>Key Supreme Court Cases</h2>
+    <div class="sec-bar"></div>
+  </div>
+
+  <div class="t-wrap">
+    <table class="scotus">
+      <thead>
+        <tr>
+          <th>Case &amp; Year</th>
+          <th>Issue</th>
+          <th>Ruling</th>
+          <th>Significance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="case-name">Marbury v. Madison</span> 1803</td>
+          <td>Can the Supreme Court declare laws unconstitutional?</td>
+          <td><span class="ruling-box ruling-expand">Yes — Judicial Review</span></td>
+          <td>Establishes SCOTUS power to strike down laws. Most important case in US history.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">McCulloch v. Maryland</span> 1819</td>
+          <td>Can Congress create a national bank? Can states tax it?</td>
+          <td><span class="ruling-box ruling-expand">Broad federal power; states cannot tax federal</span></td>
+          <td>Establishes "necessary and proper" (elastic) clause as broad federal authority.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Dred Scott v. Sandford</span> 1857</td>
+          <td>Are enslaved people citizens with constitutional rights?</td>
+          <td><span class="ruling-box ruling-limit">No citizenship; Missouri Compromise unconstitutional</span></td>
+          <td>Inflames sectional crisis. Later overturned by 14th Amendment.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Plessy v. Ferguson</span> 1896</td>
+          <td>Is racial segregation constitutional?</td>
+          <td><span class="ruling-box ruling-limit">Yes — "Separate but equal"</span></td>
+          <td>Validates Jim Crow for 58 years. Overturned by Brown v. Board 1954.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Schenck v. United States</span> 1919</td>
+          <td>Does the 1st Amendment protect speech that endangers national security?</td>
+          <td><span class="ruling-box ruling-limit">No — "Clear and Present Danger" test</span></td>
+          <td>Limits free speech during wartime. Sets precedent for later cases.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Korematsu v. United States</span> 1944</td>
+          <td>Was Japanese American internment constitutional?</td>
+          <td><span class="ruling-box ruling-limit">Yes (6-3)</span></td>
+          <td>Widely condemned as a civil liberties failure. Formally repudiated in 2018 by Trump v. Hawaii.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Brown v. Board of Education</span> 1954</td>
+          <td>Is racial segregation in public schools constitutional?</td>
+          <td><span class="ruling-box ruling-expand">No — overturns Plessy</span></td>
+          <td>Landmark civil rights ruling. Sparks "massive resistance" in the South.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Engel v. Vitale</span> 1962</td>
+          <td>Can public schools require prayer?</td>
+          <td><span class="ruling-box ruling-limit">No — violates Establishment Clause</span></td>
+          <td>Warren Court's expansive reading of separation of church and state.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Gideon v. Wainwright</span> 1963</td>
+          <td>Must states provide attorneys to defendants who can't afford one?</td>
+          <td><span class="ruling-box ruling-expand">Yes</span></td>
+          <td>Incorporates 6th Amendment right to counsel against states.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">Roe v. Wade</span> 1973</td>
+          <td>Does the Constitution protect a woman's right to abortion?</td>
+          <td><span class="ruling-box ruling-expand">Yes — privacy right (trimester framework)</span></td>
+          <td>Overturned by Dobbs v. Jackson 2022. Central to culture wars for 50 years.</td>
+        </tr>
+        <tr>
+          <td><span class="case-name">United States v. Nixon</span> 1974</td>
+          <td>Can the President claim executive privilege to withhold evidence?</td>
+          <td><span class="ruling-box ruling-limit">No — must comply with subpoena</span></td>
+          <td>Unanimously rules against Nixon. Triggers his resignation. Rule of law over executive.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- AMENDMENTS -->
+  <div class="sec-hd">
+    <div class="sec-num">03</div>
+    <h2>Constitutional Amendments — Must Know</h2>
+    <div class="sec-bar"></div>
+  </div>
+
+  <div class="amend-grid">
+    <div class="amend-card">
+      <div class="amend-head navy">Bill of Rights (1–10) · 1791</div>
+      <div class="amend-body">
+        <div class="amend-row"><div class="amend-num">1st</div><div class="amend-text">Speech, press, religion, assembly, petition</div></div>
+        <div class="amend-row"><div class="amend-num">2nd</div><div class="amend-text">Right to bear arms</div></div>
+        <div class="amend-row"><div class="amend-num">4th</div><div class="amend-text">No unreasonable search &amp; seizure</div></div>
+        <div class="amend-row"><div class="amend-num">5th</div><div class="amend-text">Due process; no self-incrimination</div></div>
+        <div class="amend-row"><div class="amend-num">6th</div><div class="amend-text">Right to speedy trial; counsel</div></div>
+        <div class="amend-row"><div class="amend-num">8th</div><div class="amend-text">No cruel/unusual punishment</div></div>
+        <div class="amend-row"><div class="amend-num">10th</div><div class="amend-text">Reserved powers to states</div></div>
+      </div>
+    </div>
+    <div class="amend-card">
+      <div class="amend-head red">Reconstruction Amendments</div>
+      <div class="amend-body">
+        <div class="amend-row"><div class="amend-num">13th</div><div class="amend-text">Abolishes slavery (1865); "except as punishment"</div></div>
+        <div class="amend-row"><div class="amend-num">14th</div><div class="amend-text">Citizenship; due process; equal protection (1868)</div></div>
+        <div class="amend-row"><div class="amend-num">15th</div><div class="amend-text">Voting rights cannot be denied by race (1870)</div></div>
+      </div>
+    </div>
+    <div class="amend-card">
+      <div class="amend-head green">Progressive Era Amendments</div>
+      <div class="amend-body">
+        <div class="amend-row"><div class="amend-num">16th</div><div class="amend-text">Federal income tax (1913)</div></div>
+        <div class="amend-row"><div class="amend-num">17th</div><div class="amend-text">Direct election of senators (1913)</div></div>
+        <div class="amend-row"><div class="amend-num">18th</div><div class="amend-text">Prohibition — alcohol banned (1919)</div></div>
+        <div class="amend-row"><div class="amend-num">19th</div><div class="amend-text">Women's suffrage (1920)</div></div>
+        <div class="amend-row"><div class="amend-num">21st</div><div class="amend-text">Prohibition repealed (1933)</div></div>
+      </div>
+    </div>
+    <div class="amend-card">
+      <div class="amend-head blue">Post-WWII Amendments</div>
+      <div class="amend-body">
+        <div class="amend-row"><div class="amend-num">22nd</div><div class="amend-text">Two-term presidential limit (1951)</div></div>
+        <div class="amend-row"><div class="amend-num">24th</div><div class="amend-text">Abolishes poll tax (1964)</div></div>
+        <div class="amend-row"><div class="amend-num">25th</div><div class="amend-text">Presidential succession (1967)</div></div>
+        <div class="amend-row"><div class="amend-num">26th</div><div class="amend-text">Voting age lowered to 18 (1971)</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="quiz-box">
+    <h4>Quick Test — SCOTUS + Amendments</h4>
+    <div class="quiz-row"><div class="qn">Q1</div><div>What power did Marbury v. Madison establish for the Supreme Court?</div></div>
+    <div class="quiz-row"><div class="qn">Q2</div><div>Which amendment overturned the Dred Scott ruling by granting citizenship to formerly enslaved people?</div></div>
+    <div class="quiz-row"><div class="qn">Q3</div><div>How did Schenck v. US limit free speech, and when was this most relevant?</div></div>
+    <div class="quiz-row"><div class="qn">Q4</div><div>Name TWO ways the Progressive Era amendments democratized the U.S. government.</div></div>
+    <div class="quiz-row"><div class="qn">Q5</div><div>Why was the unanimous ruling in United States v. Nixon historically significant?</div></div>
+    <div class="quiz-row"><div class="qn">Q6</div><div>Which amendment did Brown v. Board rely on, and what clause specifically?</div></div>
+  </div>
+
+  <div class="footer">
+    <div class="footer-left">Enrichuth · Decorate &amp; make it yours ✦</div>
+    <div class="footer-right">APUSH · CASES, AMENDMENTS &amp; TIMELINE · RESOURCE 2</div>
+  </div>
+</div>
+
+<script>
+const btn = document.getElementById('themeBtn');
+let theme = (() => { try { return localStorage.getItem('apush-charts-theme') || 'system'; } catch { return 'system'; } })();
+function applyTheme(t) {
+  document.documentElement.removeAttribute('data-theme');
+  if (t === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+  if (t === 'light') document.documentElement.setAttribute('data-theme', 'light');
+  btn.textContent = t === 'dark' ? '☀' : t === 'light' ? '◑' : '☾';
+}
+applyTheme(theme);
+btn.addEventListener('click', () => {
+  theme = theme === 'system' ? 'dark' : theme === 'dark' ? 'light' : 'system';
+  try { localStorage.setItem('apush-charts-theme', theme); } catch {}
+  applyTheme(theme);
+});
+</script>
+
+</body></html>
